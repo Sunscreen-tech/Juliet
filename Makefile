@@ -9,7 +9,7 @@ client_scripts_gpu: client/keygen.cu client/preprocessor.cu client/decrypt.cu
 	nvcc -o client/decrypt.out client/decrypt.cu -lcufhe_gpu  -Xcompiler -Wall
 	
 encalu_cpu: cloud_enc/encalu.c cloud_enc/filenames.c
-	gcc -o cloud_enc/encalu_cpu cloud_enc/encalu.c cloud_enc/filenames.c -ltfhe-spqlios-fma
+	gcc -g -O3 -o cloud_enc/encalu_cpu cloud_enc/encalu.c cloud_enc/filenames.c -ltfhe-spqlios-fma
 
 encalu_gpu: cloud_enc/encalu_gpu.cu
 	nvcc -c -o cloud_enc/encalu_gpu.o cloud_enc/encalu_gpu.cu -lcufhe_gpu  -Xcompiler -Wall 
