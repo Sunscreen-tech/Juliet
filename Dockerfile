@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Install dependencies to build HE libraries
 RUN apt-get update
-RUN apt-get install -y cmake make g++ javacc m4 libfftw3-dev git build-essential
+RUN apt-get install -y cmake make g++ javacc m4 libfftw3-dev git build-essential vim
 
 # Install tfhe
 RUN git clone https://github.com/tfhe/tfhe.git

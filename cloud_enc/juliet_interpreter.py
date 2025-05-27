@@ -1031,5 +1031,5 @@ def juliet_ee(fileName, W=8, K=16):
                 break
 
 start = time.time()
-juliet_ee("Benchmarks/Cardio.asm", 16, 64)
+juliet_ee("Benchmarks/Cardio.asm", 8, 64)
 print("Time elapsed: ", time.time() - start)
